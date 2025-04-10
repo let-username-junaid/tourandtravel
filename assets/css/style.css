@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body, html {
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+
+  nav .logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .hero-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 100px 20px 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  .hero-content p {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    max-width: 800px;
+  }
+
+  .section {
+    padding: 100px 40px;
+    text-align: center;
+    background: white;
+    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+
+  }
+
+  .section-alt {
+    background: #111;
+    color: white;
+    clip-path: polygon(0 0%, 100% 5%, 100% 100%, 0% 95%);
+
+  }
+
+  .section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+  }
+
+  .section p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 0 20px;
+  }
+
+  .footer {
+    background-color: #000;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .highlight {
+    color: #03dac5;
+    font-weight: bold;
+  }
+
+  .package-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    color:#000;
+    line-height: 1.5;
+  }
+
+  .package-card img {
+    border-radius: 12px;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom:20px;
+  }
+
+  .services img {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+  }
+  #contact{
+    background-color: #03dac5;
+    color: #000;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+
+    .package-card {
+      width: 90%;
+    }
+  }
+  nav ul li a.active {
+    color: #03dac5;
+    border-bottom: 2px solid #03dac5;
+    padding-bottom: 2px;
+  }
+  
+  .package-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+  }
+  .nav{
+    z-index:1
+  }
+
+  /* Hamburger base */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+  }
+  .close-btn{
+    display:none;
+  }
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    nav {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    nav ul {
+      width: 100%;
+      flex-direction: column;
+      background-color: #121212;
+      display: none;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+    
+  .close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    color: white;
+    display: block;
+  }
+  }
+
+  
